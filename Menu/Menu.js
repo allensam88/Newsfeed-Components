@@ -51,7 +51,6 @@ function menuCreator (array) {
     menuButton.addEventListener('click', () => (menu.classList.toggle('menu--open')));  
 
   // Step 5: return the menu component.
-  console.log(menu);
   return menu;
 }
 // Step 6: add the menu component to the DOM.

@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'Take Me Home Tonight',
+    date: 'Jul 5, 1979',
+    firstParagraph: `Eddie Money is awesome.  This song rules.  It's a great karaoke song.  I'm lovin' it!`,
+
+    secondParagraph: `The lyrics are: Take Me Home Tonight, I don't wanna let you go, till you see the light.`,
+
+    thirdParagraph: `I also like Eddie Money's other songs too.`
   }
 ];
 
@@ -144,9 +153,14 @@ function articleCreator (object) {
   return article;  
 }
   // Step 4: Map over the data, creating a component for each object and add each component to the DOM as children of the 'articles' div.
-  data.forEach((item) => {
-    articles.appendChild(articleCreator(item));
-  });
+  // data.forEach((item) => {
+  //   articles.appendChild(articleCreator(item));
+  // });
+
+data.map(item => {
+  articles.appendChild(articleCreator(item))
+  console.log(articles);
+});
 
   // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
